@@ -6,17 +6,41 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "env:decrypt": "bash scripts/env-decrypt.sh",
+    "env:encrypt": "bash scripts/env-encrypt.sh"
   },
   "dependencies": {
+    "@novu/node": "^0.14.0",
+    "@novu/notification-center": "^0.14.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@rollup/plugin-terser": "^0.4.1",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.4",
     "next": "13.3.1",
     "react": "18.2.0",
+    "react-datepicker": "^4.11.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.2",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "typescript": "5.0.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "senv": "^1.0.2"
   }
 }
