@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm run env:decrypt && next dev",
+    "build": "pnpm run env:encrypt && next build",
     "start": "next start",
     "lint": "next lint",
-    "env:decrypt": "bash scripts/env-decrypt.sh",
-    "env:encrypt": "bash scripts/env-encrypt.sh"
+    "env:decrypt": "bash ./scripts/env-decrypt.sh",
+    "env:encrypt": "bash ./scripts/env-encrypt.sh"
   },
   "dependencies": {
     "@novu/node": "^0.14.0",

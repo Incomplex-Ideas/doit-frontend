@@ -1,0 +1,23 @@
+name: Continuous deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Install dependencies"
+        run: npm install
+
+      - name: "Decrypt env files"
+        run: npm run env:decrypt
+        timeout-minutes: 1
+        env:
+          DOTENV_PASS: ${{ secrets.DOTENV_PASS }}
+          NEXT_PUBLIC_API_PREFIX: ${{ secrets.NEXT_PUBLIC_API_PREFIX }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}

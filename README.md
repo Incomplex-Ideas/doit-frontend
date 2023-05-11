@@ -10,6 +10,8 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
+## REMEMBER TO USE THESE COMMANDS IN A BASH FILE
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
