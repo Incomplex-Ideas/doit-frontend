@@ -1,9 +1,7 @@
 import { NoteData, UpdateNoteData } from '@/types/note';
-import { PayloadAction, createSlice, createReducer, createAction } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice, createAction } from '@reduxjs/toolkit'
 
-export type NoteDataSlice = NoteData & { done?: boolean }
-
-const initialState: NoteDataSlice = {
+const initialState: NoteData = {
   _id: '',
   title: '',
   description: '',

@@ -1,9 +1,9 @@
 import { RootState } from '@/store';
 import { PROFILE_STORAGE } from '@/tokens/storage';
-import { AuthResponseData } from '@/types/auth-entities';
+import { AuthData } from '@/types/auth-entities';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-const initialState: AuthResponseData = {
+const initialState: AuthData = {
   token: '',
   result: {
     _id: '',
@@ -16,7 +16,7 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: initialState,
   reducers: {
-    auth: (state, action: PayloadAction<AuthResponseData>) => {
+    auth: (state, action: PayloadAction<AuthData>) => {
       localStorage.setItem(PROFILE_STORAGE, JSON.stringify({...action?.payload}));
       state = action.payload;
     },

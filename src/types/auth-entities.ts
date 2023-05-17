@@ -10,7 +10,7 @@ export type UserSignupData = {
   password: string;
 }
 
-export type AuthResponseData = {
+export type AuthData = {
   token: string;
   result: {
     _id: string;
